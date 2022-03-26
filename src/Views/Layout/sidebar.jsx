@@ -26,10 +26,10 @@ export default function Sidebar() {
         
 
 
-   <Grid item xs={2} direction='column' sx={{display:'flex',height: '100vh',borderRight:1 ,borderColor:'#d4d5d5'}}>
+   <Grid item xs={2}  sx={{display:'flex',flexDirection:'column' ,height: '100vh',borderRight:1 ,borderColor:'#d4d5d5',width:'100px'}}>
    
-            <div style={{width: '100%',height:'64px', display: 'flex',justifyContent: 'center',alignItems:'center', backgroundColor:'#321fdb'}}>
-            <AcUnitIcon sx={{color:'white'}} />
+            <div style={{width: '100%',height:'64px', display: 'flex',justifyContent: 'center',alignItems:'center', backgroundColor:'#323232'}}>
+            <AcUnitIcon sx={{color:'white',mr: 1 }} />
             <Typography   variant='h6' sx={{color:'white'}}>
                 APPONE
             </Typography>
@@ -51,7 +51,7 @@ export default function Sidebar() {
                     Department
                 </ListItemText>
             </ListItemButton>
-
+                <Divider variant='middle' />
             <ListItemButton>
          
          <ListItemIcon>
@@ -61,6 +61,7 @@ export default function Sidebar() {
              Doctor
          </ListItemText>
      </ListItemButton>
+     <Divider variant='middle' />
 
      <ListItemButton>
          
@@ -71,7 +72,7 @@ export default function Sidebar() {
              Patient
          </ListItemText>
      </ListItemButton>
-
+     <Divider variant='middle' />
      <ListItemButton>
          
          <ListItemIcon>
@@ -81,7 +82,7 @@ export default function Sidebar() {
              Schedule
          </ListItemText>
      </ListItemButton>
-
+     <Divider variant='middle' />
             </List>
             </Box>
      
@@ -99,7 +100,7 @@ export default function Sidebar() {
                     Settings
                 </ListItemText>
             </ListItemButton>
-
+            <Divider variant='middle' />
             <ListItemButton>
                 <ListItemIcon>
                 <DisplaySettingsIcon />
@@ -108,7 +109,7 @@ export default function Sidebar() {
                     Prefernces
                 </ListItemText>
             </ListItemButton>
-
+            <Divider variant='middle' />
             </List>
             </Box>
     
