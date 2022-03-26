@@ -1,8 +1,7 @@
-import { AppBar, Avatar, Badge, Button, Divider, Grid, IconButton, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader, ScopedCssBaseline, Toolbar, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, AppBar, Avatar, Badge, Button, Divider, Grid, IconButton, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader, ScopedCssBaseline, Toolbar, Typography } from '@mui/material'
 import { bgcolor, Box } from '@mui/system'
 import React from 'react'
 import AcUnitIcon from '@mui/icons-material/AcUnit';
-import DashboardIcon from '@mui/icons-material/Dashboard';
 import AppsIcon from '@mui/icons-material/Apps';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import BoyIcon from '@mui/icons-material/Boy';
@@ -12,6 +11,7 @@ import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import LanguageIcon from '@mui/icons-material/Language';
+import { ExpandMore } from '@mui/icons-material';
 
 
 
@@ -22,7 +22,7 @@ export default function Sidebar() {
     <ScopedCssBaseline>
        
 
-    <Grid container sx={{widows:'100vh'}} >
+    <Grid container  >
         
 
 
@@ -37,14 +37,14 @@ export default function Sidebar() {
             </div>
 
 
-            <Box component='div' >
-            <List>
+            <Box component='div'  >
+            <List >
             <ListSubheader>
                     List
                 </ListSubheader>
-            <ListItemButton>
+            <ListItemButton  >
          
-                <ListItemIcon>
+                <ListItemIcon >
                 <AppsIcon />
                 </ListItemIcon>
                 <ListItemText>
@@ -109,8 +109,29 @@ export default function Sidebar() {
                     Prefernces
                 </ListItemText>
             </ListItemButton>
+    
             <Divider variant='middle' />
+            
+
             </List>
+
+
+            <Accordion>
+                <AccordionSummary expandIcon={<ExpandMore/>} >
+                 
+                 <Box sx={{ display:'flex',alignItems:'center' }}>
+                 <IconButton> <BoyIcon/> </IconButton>   
+                 <Typography>
+                     Patient
+                 </Typography>
+                 </Box>
+
+                </AccordionSummary>
+                <AccordionDetails>
+                
+                </AccordionDetails>
+
+            </Accordion>
             </Box>
     
 

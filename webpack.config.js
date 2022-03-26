@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
 output: {
-publicPath: "https://moussa2100.github.io/apponeUI/",
+publicPath: "http://localhost:8000/",
 },
 
 resolve: {
