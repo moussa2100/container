@@ -1,0 +1,155 @@
+import { AppBar, Avatar, Badge, Button, Divider, Grid, IconButton, List, ListItemButton, ListItemIcon, ListItemText, ListSubheader, ScopedCssBaseline, Toolbar, Typography } from '@mui/material'
+import { bgcolor, Box } from '@mui/system'
+import React from 'react'
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import AppsIcon from '@mui/icons-material/Apps';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import BoyIcon from '@mui/icons-material/Boy';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
+import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
+import MenuIcon from '@mui/icons-material/Menu';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import LanguageIcon from '@mui/icons-material/Language';
+
+
+
+export default function Sidebar() {
+  return (
+<>
+
+    <ScopedCssBaseline>
+       
+
+    <Grid container sx={{widows:'100vh'}} >
+        
+
+
+   <Grid item xs={2} direction='column' sx={{display:'flex',height: '100vh',borderRight:1 ,borderColor:'#d4d5d5'}}>
+   
+            <div style={{width: '100%',height:'64px', display: 'flex',justifyContent: 'center',alignItems:'center', backgroundColor:'#321fdb'}}>
+            <AcUnitIcon sx={{color:'white'}} />
+            <Typography   variant='h6' sx={{color:'white'}}>
+                APPONE
+            </Typography>
+            
+            </div>
+
+
+            <Box component='div' >
+            <List>
+            <ListSubheader>
+                    List
+                </ListSubheader>
+            <ListItemButton>
+         
+                <ListItemIcon>
+                <AppsIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Department
+                </ListItemText>
+            </ListItemButton>
+
+            <ListItemButton>
+         
+         <ListItemIcon>
+         <AccountBoxIcon />
+         </ListItemIcon>
+         <ListItemText>
+             Doctor
+         </ListItemText>
+     </ListItemButton>
+
+     <ListItemButton>
+         
+         <ListItemIcon>
+         <BoyIcon />
+         </ListItemIcon>
+         <ListItemText>
+             Patient
+         </ListItemText>
+     </ListItemButton>
+
+     <ListItemButton>
+         
+         <ListItemIcon>
+         <CalendarMonthIcon />
+         </ListItemIcon>
+         <ListItemText>
+             Schedule
+         </ListItemText>
+     </ListItemButton>
+
+            </List>
+            </Box>
+     
+        
+            <Box component='div' >
+            <List>
+                <ListSubheader>
+                    Settings
+                </ListSubheader>
+                <ListItemButton>
+                <ListItemIcon>
+                <SettingsApplicationsIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Settings
+                </ListItemText>
+            </ListItemButton>
+
+            <ListItemButton>
+                <ListItemIcon>
+                <DisplaySettingsIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Prefernces
+                </ListItemText>
+            </ListItemButton>
+
+            </List>
+            </Box>
+    
+
+    </Grid>
+
+    <Grid item xs={10} sx={{  }}>
+
+        <AppBar position='static' sx={{height:'50px' }} > 
+            <Toolbar
+            sx={{width: '100%',height:'50px', display: 'flex',justifyContent: 'center',alignItems:'center', backgroundColor:'#f6f6f6' }}
+            >
+
+
+                <Box  sx={{ flexGrow:1 }}>
+                <IconButton>
+                    <MenuIcon />
+                </IconButton>
+                </Box>
+                <IconButton>
+                <LanguageIcon />
+                </IconButton>
+                <IconButton>
+                <Badge badgeContent={5} >
+                <NotificationsIcon />
+                </Badge>
+                </IconButton>
+
+                <IconButton>
+                <Avatar src='https://static.planetminecraft.com/files/resource_media/screenshot/1140/steve-jobs1_601898_601991.jpg' />
+                </IconButton>
+                
+            </Toolbar>
+
+        </AppBar>
+ 
+    </Grid>
+
+    </Grid>
+
+    </ScopedCssBaseline>
+    </>
+  )
+}
